@@ -9,8 +9,7 @@ body {
     font-family: 'josefin sans' , sans-serif ;
     font-size: 62.5%;
     color: aliceblue;
-    
-
+    display: flex;
 }
 
 h1 {
