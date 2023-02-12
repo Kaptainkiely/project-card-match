@@ -6,6 +6,7 @@
     width: 640px;
     height: 640px;
     flex-wrap: wrap;
+    perspective: 1000px;
 }
 
 .memory-card {
@@ -16,6 +17,8 @@
     transform-style: preserve-3d;
     box-shadow: 1px 1px 0 rgba(0, 0, 0, .3);
    transform: scale(1);
+   transform-style: preserve-3d;
+   transition: .5s;
   }
 
   .memory-card:active {
@@ -36,7 +39,12 @@
     padding: 10px;
     border-radius: 5px;
     background: #1d1699;
+    backface-visibility: hidden;
 
+}
+
+.front-face {
+    transform: rotateY(180deg);
 }
 
 .heading {
