@@ -5,11 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lets play !</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/new-super-mario-font-u" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="game.css" />
 </head>
 <body>
+    <div class="time-counter">
+        <h3>Your moves:</h3>
+        <h3 class="moves">0</h3>
+        <h3>Your time:</h3>
+        <h3 class="timer">0</h3>
+    </div>
+
     
     <section class="memory-game">
         <div class="memory-card"data-framework="yoshi">
@@ -71,6 +78,26 @@
           <img class="front-face" src="images/bowser1.svg" alt="bowser">
           <img class="back-face" src="images/card.svg" alt="Memory Card">
         </div>
+
+        <div class="memory-card" data-framework="toad">
+            <img class="front-face" src="images/toad1.svg" alt="bowser">
+            <img class="back-face" src="images/card.svg" alt="Memory Card">
+          </div>
+
+          <div class="memory-card" data-framework="toad">
+            <img class="front-face" src="images/toad1.svg" alt="bowser">
+            <img class="back-face" src="images/card.svg" alt="Memory Card">
+          </div>
+
+          <div class="memory-card" data-framework="star">
+            <img class="front-face" src="images/star1.svg" alt="bowser">
+            <img class="back-face" src="images/card.svg" alt="Memory Card">
+          </div>
+
+          <div class="memory-card" data-framework="star">
+            <img class="front-face" src="images/star1.svg" alt="bowser">
+            <img class="back-face" src="images/card.svg" alt="Memory Card">
+          </div>
       </section>
 
       <script src="script.js"></script>
