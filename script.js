@@ -67,6 +67,15 @@ function flipCard() {
           card.style.order = ramdomPos;
         });
       })();
+
+      var timeLeft = 60;
+var countdownTimer = setInterval(function(){
+  timeLeft--;
+  document.getElementById("timer").textContent = timeLeft;
+  if (timeLeft <= 0)
+    clearInterval(countdownTimer);
+},1000);
+
   
   
   cards.forEach(card => card.addEventListener('click', flipCard));
