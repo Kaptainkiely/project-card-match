@@ -4,6 +4,7 @@ let hasFlippedCard = false;
 let lockboard = false;
 let firstCard, secondCard;
 let moves = 0;
+let matchSound = new Audio('sound/match.wav');
 
 
 
@@ -39,6 +40,16 @@ function flipCard() {
     function disableCards() {
       firstCard.removeEventListener('click', flipCard);
       secondCard.removeEventListener('click', flipCard);
+      playMatchSound();
+
+      let matchedCards = document.querySelectorAll('.match');
+      console.log('matchedCards', matchedCards.length);
+      console.log('cards', cards.length);
+  if (matchedCards.length === cards.length) {
+    console.log('matchedCards', matchedCards.length);
+    console.log('cards', cards.length);
+    window.location.href = "win.html";
+  }
 
       resetBoard();
     }
@@ -69,13 +80,20 @@ function flipCard() {
       })();
 
       var timeLeft = 60;
-var countdownTimer = setInterval(function(){
-  timeLeft--;
-  document.getElementById("timer").textContent = timeLeft;
-  if (timeLeft <= 0)
-    clearInterval(countdownTimer);
-},1000);
+      var countdownTimer = setInterval(function(){
+        timeLeft--;
+        document.getElementById("timer").textContent = timeLeft;
+        if (timeLeft <= 0) {
+          clearInterval(countdownTimer);
+          window.location.href = "gameover.html";
+        }
+      },1000);
 
+      function playMatchSound() {
+      matchSound.currentTime = 0;
+      matchSound.play();
+      }
+      
   
   
   cards.forEach(card => card.addEventListener('click', flipCard));
