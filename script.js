@@ -37,22 +37,24 @@ function flipCard() {
 }
 
    
-    function disableCards() {
-      firstCard.removeEventListener('click', flipCard);
-      secondCard.removeEventListener('click', flipCard);
-      playMatchSound();
-
-      let matchedCards = document.querySelectorAll('.match');
-      console.log('matchedCards', matchedCards.length);
-      console.log('cards', cards.length);
-  if (matchedCards.length === cards.length) {
+function disableCards() {
+    firstCard.removeEventListener('click', flipCard);
+    secondCard.removeEventListener('click', flipCard);
+    firstCard.classList.add('match');
+    secondCard.classList.add('match');
+    playMatchSound();
+    let matchedCards = document.querySelectorAll('.match');
     console.log('matchedCards', matchedCards.length);
     console.log('cards', cards.length);
-    window.location.href = "win.html";
-  }
-
-      resetBoard();
+    
+    if (matchedCards.length === cards.length) {
+      console.log('All cards matched!');
+      window.location.href = "win.html";
     }
+  
+    resetBoard();
+  }
+  
    
     function unflipCards() {
         lockBoard = true;
@@ -87,7 +89,7 @@ function flipCard() {
           clearInterval(countdownTimer);
           window.location.href = "gameover.html";
         }
-      },1000);
+      },2000);
 
       function playMatchSound() {
       matchSound.currentTime = 0;
