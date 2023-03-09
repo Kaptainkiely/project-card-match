@@ -4,6 +4,6 @@ playButton.addEventListener("click", playSound);
 
 
 function playSound() {
-    const audio = new Audio('/Users/aaronkiely/Desktop/project card match/ptoject-card-match/sound/match.wav');
+    const audio = new Audio('sound/match.wav');
     audio.play();
   }

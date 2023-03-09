@@ -10,16 +10,18 @@
     <link rel="stylesheet" href="game.css" />
 </head>
 <body>
-    <div class="time-counter">
-        <h3>Your moves:</h3>
-        <h3 class="moves">0</h3>
-        <h3>Your time:</h3>
-        <h3 id="timer">60</h3>
-
-    </div>
+  
 
     
-    <section class="memory-game">
+    <div class="memory-game">
+        <div class="time-counter">
+            <h3>Your moves:</h3>
+            <h3 class="moves">0</h3>
+            <h3>Your time:</h3>
+            <h3 id="timer">60</h3>
+    
+        </div>
+    
         <div class="memory-card"data-framework="yoshi">
           <img class="front-face" src="images/yoshi1.svg" alt="yoshi">
           <img class="back-face" src="images/card.svg" alt="Memory Card">
@@ -99,7 +101,7 @@
             <img class="front-face" src="images/star1.svg" alt="bowser">
             <img class="back-face" src="images/card.svg" alt="Memory Card">
           </div>
-      </section>
+        </div>
 
       <audio id="match-sound" src="sound/match.wav"></audio>
 

@@ -17,13 +17,13 @@ function flipCard() {
         hasFlippedCard = true;
         firstCard = this;
         return;
-      }
+     }
 
-      secondCard = this;
-   
-      checkForMatch();
+secondCard = this;
+
+checkForMatch();
     }
-   
+
     function checkForMatch() {
       if (firstCard.dataset.framework === secondCard.dataset.framework) {
         disableCards();
@@ -89,7 +89,7 @@ function disableCards() {
           clearInterval(countdownTimer);
           window.location.href = "gameover.html";
         }
-      },2000);
+      },9000);
 
       function playMatchSound() {
       matchSound.currentTime = 0;
